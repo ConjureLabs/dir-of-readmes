@@ -4,8 +4,17 @@
   "description": "crawls a directory, concats all readmes, and joins them into one",
   "main": "index.js",
   "scripts": {
+    "lint": "bash ./bash/lint.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@conjurelabs/utils": "^0.1.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "9.0.0",
+    "eslint": "5.6.0",
+    "jscs": "3.0.7"
+  }
 }
