@@ -1,6 +1,6 @@
 {
   "name": "@conjurelabs/dir-of-readmes",
-  "version": "0.0.1-alpha1",
+  "version": "0.0.1",
   "description": "crawls a directory, concats all readmes, and joins them into one",
   "main": "index.js",
   "scripts": {
