@@ -2,6 +2,12 @@
 
 This is a simply utility to syncrounously crawl a base directory, find any `README.md` files, concat them, and write the result to a destination `README.md`.
 
+## Install
+
+```sh
+npm install --save @conjurelabs/dir-of-readmes
+```
+
 ## Usage
 
 ```sh
