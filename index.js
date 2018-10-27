@@ -60,7 +60,7 @@ function concatReadmesToDestination(allReadmePaths, destinationPath) {
 
 // [a, b, c] -->  [a, separator, b, separator, c]
 function injectSeparators(contents) {
-  for (i = contents.length - 1; i > 0; i--) {
+  for (let i = contents.length - 1; i > 0; i--) {
     contents.splice(i, 0, separatorContent)
   }
 }
