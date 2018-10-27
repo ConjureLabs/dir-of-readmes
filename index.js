@@ -15,6 +15,11 @@ if (!DESTINATION_README_PATH) {
   throw new Error('dir-of-readmes requires you set env var DESTINATION_README_PATH')
 }
 
+const separatorContent = Buffer.from(`
+---
+
+`, 'utf8')
+
 const readmePaths = crawlForReadmes(SOURCE_READMES_DIR)
 sortInsensitive(readmePaths)
 concatReadmesToDestination(readmePaths, DESTINATION_README_PATH)
@@ -47,5 +52,15 @@ function concatReadmesToDestination(allReadmePaths, destinationPath) {
     allContents.push(fs.readFileSync(readmePath))
   }
 
+  injectSeparators(allContents)
+
   fs.writeFileSync(destinationPath, Buffer.concat(allContents))
+}
+
+
+// [a, b, c] -->  [a, separator, b, separator, c]
+function injectSeparators(contents) {
+  for (i = contents.length - 1; i > 0; i--) {
+    contents.splice(i, 0, separatorContent)
+  }
 }
