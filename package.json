@@ -10,7 +10,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@conjurelabs/utils": "^0.1.0"
+    "@conjurelabs/utils": "^0.1.0",
+    "minimist": ">=1.2.2"
   },
   "devDependencies": {
     "babel-eslint": "9.0.0",
